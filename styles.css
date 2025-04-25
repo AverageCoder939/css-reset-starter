@@ -1,4 +1,57 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 /* CSS VARIABLES */
 :root{
@@ -14,7 +67,6 @@
 }
 
 /* Body Styles */
-/* You will need to add more, but this adds a background pattern to the page */
 body{
     background: var(--coral) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cg fill='%23613a43' fill-opacity='0.2'%3E%3Cpath d='M12 0h18v6h6v6h6v18h-6v6h-6v6H12v-6H6v-6H0V12h6V6h6V0zm12 6h-6v6h-6v6H6v6h6v6h6v6h6v-6h6v-6h6v-6h-6v-6h-6V6zm-6 12h6v6h-6v-6zm24 24h6v6h-6v-6z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
     font-family: var(--fonts);
@@ -24,7 +76,6 @@ body{
 }
 
 /* Styles for the Header, Main, & Footer */
-/* Limits the width, adds a background color and padding, and centers them on the page */
 header, main, footer{
     padding: 1rem;
     width: calc(1000px - 2rem);
@@ -143,7 +194,7 @@ fieldset{
     border-color: var(--red);
 }
 
-/* Code for Custom Radios - Compare to Your zyBook, I added additional code to make these match my form styles */
+/* Code for Custom Radios */
 input[type=radio] + label {
     cursor: pointer;
     display: flex;
@@ -160,7 +211,7 @@ input[type=radio] {
 }
 
 input[type=radio] + label::before {
-    content: "\00a0";   /* Non-breaking space */
+    content: "\00a0";   
     font-size: 2.75em;
     line-height: 0.3;
     border-radius: 50%;
@@ -169,7 +220,7 @@ input[type=radio] + label::before {
     width: 22px;
     text-align: center;
     margin-right: 16px;
-    border: 2px solid var(--red);   /* Push focus shadow away */
+    border: 2px solid var(--red);   
     background-color: var(--white);
     padding: 2px 1px 0 0;
 }
@@ -231,5 +282,5 @@ pre code{
 
 code div{
     padding: 1rem;
-    overflow: scroll;
+    overflow: auto;
 }
